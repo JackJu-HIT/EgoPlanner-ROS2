@@ -62,7 +62,7 @@ namespace ego_planner
     int same_occ_state_times = ENOUGH_INTERVAL + 1;
     bool occ, last_occ = false;
     bool flag_got_start = false, flag_got_end = false, flag_got_end_maybe = false;
-    int i_end = (int)init_points.cols() - order_;// - ((int)init_points.cols() - 2 * order_) / 3; // only check closed 2/3 points.
+    int i_end = (int)init_points.cols() - order_ - ((int)init_points.cols() - 2 * order_) / 3; // only check closed 2/3 points.
     for (int i = order_; i <= i_end; ++i)
     {
       for (double a = 1.0; a >= 0.0; a -= step_size)
